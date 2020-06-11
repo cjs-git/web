@@ -3,5 +3,9 @@ body {
 }
 
 h1, p {
-	color: white;
+	color: #FFFFFF;
+}
+
+a:link, a:visited, a:hover, a:active {
+	color: #ADD8E6;
 }
