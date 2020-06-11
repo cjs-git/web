@@ -6,11 +6,7 @@ h1, p {
 	color: #ffffff;
 }
 
-a:link, a:visited {
+a {
 	color: #add8e6;
-}
-
-a:hover, a:active {
-	color: #ff8c00
 }
 
