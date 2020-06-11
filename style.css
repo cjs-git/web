@@ -1,14 +1,21 @@
 body {
-	background-color: #696969;
+	background-color: #144955;
 }
 
-a {
-	color: #add8e6;
+a:link, a:visited {
+	color: #F14C38;
+}
+
+a:hover {
+	color: #F4F1E0;
 }
 
 p {
 	color: #ffffff;
-	margin-left: 10px;
+	width: 800px;
+	margin-top: 35px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 h1, h2 {
