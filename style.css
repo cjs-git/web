@@ -8,9 +8,11 @@ a {
 
 p {
 	color: #ffffff;
+	margin-left: 10px;
 }
 
 h1, h2 {
+	color: #ffffff;
 	margin-left: 10px;
 	text-align: center;
 }
