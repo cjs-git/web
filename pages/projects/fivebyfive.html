@@ -14,11 +14,11 @@
 		var w,r = 0;
 
 		function populateTable() {
-			var w = document.getElementByID("weight").value;
-			var r = document.getElementByID("reps").value;
+			var w = document.getElementById("weight").value;
+			var r = document.getElementById("reps").value;
 			var ORM = w * (1 + (r / 30));
-			var warmup = document.getElementByID("warmup");
-			warmup.value = "orm * wu";
+			var warmup = document.getElementById("warmup");
+			warmup.value = orm * wu;
 			
 		}
 	</script>
@@ -51,7 +51,7 @@
 			<input type="number" id="weight" name="weight"><br>
 			<label for="reps" class="label">Max Reps</label><br>
 			<input type="number" id="reps" name="reps"><br><br>
-			<input type="button" value="Go" onclick="populateTable()">
+			<input type="button" value="Go" onclick="populateTable">
 		</form>
 		<table id="weighttable">
 			<tr>
