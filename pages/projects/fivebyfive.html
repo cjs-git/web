@@ -11,12 +11,14 @@
 		var s3 = 0.86;
 		var s4 = 0.88;
 		var s5 = 0.9;
-		var weight = document.getElementByID("weight").value;
-		var reps = document.getElementByID("reps").value;
-		var 1RM = weight * (1 + (reps / 40));
+		var w,r = 0;
 
 		function populateTable() {
-			document.getElementByID("warmup").value = 1RM * wu;
+			var w = document.getElementByID("weight").valueOf();
+			var r = document.getElementByID("reps").valueOf();
+			var ORM = w * (1 + (r / 30));
+			return document.getElementByID("warmup").value = "ORM * wu";
+			
 		}
 	</script>
 </head>
@@ -45,9 +47,10 @@
 	<div style="width:600px;margin:auto;">
 		<form style="float:left;color:#ffffff;">
 			<label for="weight">Max Weight</label><br>
-			<input type="number" id="weight" name="weight" oninput="populateTable()"><br>
+			<input type="number" id="weight" name="weight"><br>
 			<label for="reps" class="label">Max Reps</label><br>
-			<input type="number" id="reps" name="reps" oninput="populateTable()"><br><br>
+			<input type="number" id="reps" name="reps"><br><br>
+			<input type="button" onclick=populateTable() value="Go">
 		</form>
 		<table id="weighttable">
 			<tr>
