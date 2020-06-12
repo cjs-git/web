@@ -38,3 +38,12 @@ h1, h2 {
 	text-align: center;
 	font-size: 28px;
 }
+
+table {
+	float:right;
+	color:#ffffff;
+}
+
+th, td {
+	text-align:center;
+}
