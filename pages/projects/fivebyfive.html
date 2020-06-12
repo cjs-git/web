@@ -16,10 +16,19 @@
 		function populateTable() {
 			var w = document.getElementById("weight").value;
 			var r = document.getElementById("reps").value;
-			var ORM = w * (1 + (r / 30));
+			var orm = w * (1 + (r / 30));
 			var warmup = document.getElementById("warmup");
-			warmup.value = orm * wu;
-			
+			warmup.value = Math.round((orm * wu)/5) * 5;
+			var set1 = document.getElementById("set1");
+			set1.value = Math.round((orm * s1)/5) * 5;
+			var set2 = document.getElementById("set2");
+			set2.value = Math.round((orm * s2)/5) * 5;
+			var set3 = document.getElementById("set3");
+			set3.value = Math.round((orm * s3)/5) * 5;
+			var set4 = document.getElementById("set4");
+			set4.value = Math.round((orm * s4)/5) * 5;
+			var set5 = document.getElementById("set5");
+			set5.value = Math.round((orm * s5)/5) * 5;
 		}
 	</script>
 </head>
@@ -32,13 +41,13 @@
 	<hr>
 	<nav>
 		<h2>
-			<a href="../index.html">Home</a>
+			<a href="../../index.html">Home</a>
 				&nbsp;
-			<a href="about.html">About</a>
+			<a href="../about.html">About</a>
 				&nbsp;
-			<a href="blog.html">Blog</a>
+			<a href="../blog.html">Blog</a>
 				&nbsp;
-			<a href="projects.html" class="active">Projects</a>
+			<a href="../projects.html" class="active">Projects</a>
 		</h2>
 	</nav>
 	<hr>
@@ -51,7 +60,7 @@
 			<input type="number" id="weight" name="weight"><br>
 			<label for="reps" class="label">Max Reps</label><br>
 			<input type="number" id="reps" name="reps"><br><br>
-			<input type="button" value="Go" onclick="populateTable">
+			<input type="button" value="Go" onclick="populateTable()">
 		</form>
 		<table id="weighttable">
 			<tr>
