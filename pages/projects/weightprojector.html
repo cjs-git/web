@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bodyweight Projection</title>
+	<link rel="icon" type="image/png" href="../../favicon.png">
+	<link rel="stylesheet" type="text/css" href="../../style.css">
+	<script>
+		function calcTDEE() {
+
+			var w = document.getElementById("weight").value;
+			var h = document.getElementById("height").value;
+			var a = document.getElementById("age").value;
+			var s;
+			var tdee;
+			var sopt = document.getElementsByName("sex");
+
+			for (var i = 0; i <= 1; i++) {
+				if (sopt[i].checked == true) {
+					s = sopt[i].value
+				} 
+			};
+
+			if (s == "male") {
+				tdee = (66 + (13.7 * (w/2.2)) + (5 * (h*2.54)) - (6.8 * a)) * 1.2
+			} else if (s == "female") {
+				tdee = (655 + (9.6 * (w/2.2)) + (1.8 * (h*2.54)) - (4.7 * a)) *1.2 
+			} else {
+				alert("Please select a sex")
+			};
+			
+			document.getElementById("tdee").value = Math.round(tdee);
+
+			}
+
+
+	</script>
+</head>
+<body>
+	<header>
+		<h1>
+			Christian Sweeney
+		</h1>
+	</header>
+	<hr>
+	<nav>
+		<h2>
+			<a href="../../index.html">Home</a>
+				&nbsp;
+			<a href="../about.html">About</a>
+				&nbsp;
+			<a href="../blog.html">Blog</a>
+				&nbsp;
+			<a href="../projects.html" class="active">Projects</a>
+		</h2>
+	</nav>
+	<hr>
+	<h2>
+		Bodyweight Projection
+	</h2>
+	<div style="width:600px;margin:auto;">
+		<form style="width:300px;float:left;color:#ffffff">
+			<label for="weight">
+				Weight (lbs)
+			</label><br>
+				<input type="number" id="weight" name="weight"><br>
+			<label for="height">
+				Height (in)
+			</label><br>
+				<input type="number" id="height" name="height"><br>
+			<label for="age">
+				Age
+			</label><br>
+				<input type="number" id="age" name="age"><br>
+			<label for="calgoal">
+				Calories per day
+			</label><br>
+				<input type="number" id="calgoal" name="calgoal"><br>
+			<label for="wgoal">
+				Goal Weight
+			</label><br>
+				<input type="number" id="wgoal" name="wgoal"><br><br>
+			<label for="sex">
+				Sex
+			</label><br>
+				<input type="radio" id="male" name="sex" value="male">
+			<label for="male">
+				Male
+			</label><br>
+				<input type="radio" id="female" name="sex" value="female">
+			<label for="female">
+				Female
+			</label><br><br>
+				<input type="button" value="Go" onclick="calcTDEE()"><br><br>
+		</form>
+		<form style="width:300px;float:right;color:#ffffff">
+			<label for="tdee">
+				TDEE
+			</label><br>
+				<input type="number" id="tdee" name="tdee"><br>
+		</form>
+			
+</body>
+</html>
